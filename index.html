@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <nav>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <h1 class="logo">Varshini.protfolio</h1>
+    <div class="nav-links" id="navLinks">
+      <ul>
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#skill">SKILL</a></li>
+        <li><a href="#project">PROJECT</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+        <li>
+           <button class="theme-btn" onclick="toggleTheme()">✨</button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+<section id="home" class="hero">
+  <h1><span class="highlight">Varshini</span></h1>
+  <p>Pre-final year IT student | Frontend Develper.</p>
+</section>
+<section id="about">
+  <h2>About</h2>
+    <p >
+      I am a highly motivated pre-final year Information Technology student with a strong interest in frontend development and modern web technologies. I specialize in building responsive, accessible, and user-centric web applications using HTML, CSS, JavaScript, and React. I am committed to writing clean, efficient, and scalable code while ensuring a seamless user experience. Through academic projects and self-learning, I continuously enhance my technical skills and stay updated with industry trends. I am passionate about transforming ideas into functional digital solutions and aim to contribute effectively to innovative development teams while growing as a professional frontend developer.
+    </p>
+</section>
+<section id="skill">
+  <h1>SKILL</h1>
+  <div class="card-container" id="cards"></div>
+</section>
+
+<section id="project">
+  <h1>PROJECT</h1>
+   <div class="project-container">
+    <div class="project-card">
+      <img src="ff.jpeg" alt="Fit Fusion">
+      <h3>Fit Fusion</h3>
+      <p>Fit Fusion is an AI-powered virtual try-on e-commerce web application that allows users to visualize how outfits look on them before making a purchase.<br>
+🔹 Key Features:
+👗 AI-based virtual try-on simulation
+🎨 Modern and clean UI design
+
+⚡ Smooth navigation and user-friendly interface</p>
+    </div>
+    <section id="project">
+  <div id="projectCards" class="project-container"></div>
+</section>
+
+</section>
+
+<script>
+  const cardsData = [
+    {
+      title: "HTML",
+      image: "html.jpeg",
+      description: "Strong foundation in structuring web pages using semantic HTML5 elements. Experienced in creating accessible, well-organized, and SEO-friendly layouts that form the backbone of responsive web applications."
+    },
+    {
+      title: "CSS",
+      image: "css.jpeg",
+      description: "Skilled in designing visually appealing and responsive user interfaces using CSS3. Proficient in Flexbox, Grid, animations, and media queries to ensure consistent design across all devices and screen sizes."
+    },
+    {
+      title:"Digital Marketing",
+      image:"dm.jpeg",
+      description:"Knowledgeable in digital marketing strategies including social media marketing, content creation, SEO basics, and online branding. Focused on improving online visibility and engagement through data-driven approaches."
+    }
+  ];
+
+  document.getElementById("cards").innerHTML = cardsData.map(skill => `
+    <div class="card">
+      <img src="${skill.image}" alt="${skill.title}">
+      <h2>${skill.title}</h2>
+      <p>${skill.description}</p>
+    </div>
+  `).join("");
+
+  function toggleMenu() {
+    const menu = document.getElementById("navLinks");
+    menu.style.display = menu.style.display === "block" ? "none" : "block";
+  }
+
+  function toggleTheme() {
+    document.body.classList.toggle("light-mode");
+  }
+</script>
+
+<section id="contact">
+  <h1>Contact</h1>
+  <p>varshinikalaiselvi06@gmail.com</p><br>
+  <p>9361493303</p>
+</section>
+</body>
+</html>
