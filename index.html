@@ -5,12 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <script src="main.js"></script>
 </head>
 <body>
 <header>
   <nav>
     <div class="hamburger" onclick="toggleMenu()">☰</div>
-    <h1 class="logo">Varshini.protfolio</h1>
+    <h1 class="logo">Varshini's Protfolio</h1>
     <div class="nav-links" id="navLinks">
       <ul>
         <li><a href="#home">HOME</a></li>
@@ -18,9 +19,6 @@
         <li><a href="#skill">SKILL</a></li>
         <li><a href="#project">PROJECT</a></li>
         <li><a href="#contact">CONTACT</a></li>
-        <li>
-           <button class="theme-btn" onclick="toggleTheme()">✨</button>
-        </li>
       </ul>
     </div>
   </nav>
@@ -39,45 +37,45 @@
   <h1>SKILL</h1>
   <div class="card-container" id="cards"></div>
 </section>
-
 <section id="project">
   <h1>PROJECT</h1>
    <div class="project-container">
     <div class="project-card">
-      <img src="ff.jpeg" alt="Fit Fusion">
+      <img src="assets/ff.jpeg" alt="Fit Fusion">
       <h3>Fit Fusion</h3>
-      <p>Fit Fusion is an AI-powered virtual try-on e-commerce web application that allows users to visualize how outfits look on them before making a purchase.<br>
-🔹 Key Features:
-👗 AI-based virtual try-on simulation
-🎨 Modern and clean UI design
-
-⚡ Smooth navigation and user-friendly interface</p>
+      <p>Fit Fusion is an AI-powered virtual try-on e-commerce web application that allows users to visualize how outfits look on them before making a purchase.
+The website features a clean and modern user interface with smooth navigation and fully responsive design, ensuring seamless performance across desktop, tablet, and mobile devices. This project focuses on combining technology and user experience to create a smarter and more interactive way of shopping online.
+</p>
     </div>
     <section id="project">
   <div id="projectCards" class="project-container"></div>
 </section>
+<div class="project-card">
+  <img src="assets/web.jpeg" alt="Website Design Project">
+  <h3>Responsive Website Design</h3>
+  <p>A modern and fully responsive website designed using HTML, CSS, and JavaScript with clean UI and smooth navigation.Designed and developed a modern responsive website using HTML, CSS, and JavaScript with a strong focus on clean structure and user-friendly interface.
 
+The website is built to adapt seamlessly across desktop, tablet, and mobile devices, ensuring consistent layout and smooth performance on all screen sizes.</p>
+</div>
 </section>
-
 <script>
   const cardsData = [
     {
       title: "HTML",
-      image: "html.jpeg",
+      image: "assets/html.jpeg",
       description: "Strong foundation in structuring web pages using semantic HTML5 elements. Experienced in creating accessible, well-organized, and SEO-friendly layouts that form the backbone of responsive web applications."
     },
     {
       title: "CSS",
-      image: "css.jpeg",
+      image: "assets/css.jpeg",
       description: "Skilled in designing visually appealing and responsive user interfaces using CSS3. Proficient in Flexbox, Grid, animations, and media queries to ensure consistent design across all devices and screen sizes."
     },
     {
       title:"Digital Marketing",
-      image:"dm.jpeg",
+      image:"assets/dm.jpeg",
       description:"Knowledgeable in digital marketing strategies including social media marketing, content creation, SEO basics, and online branding. Focused on improving online visibility and engagement through data-driven approaches."
     }
   ];
-
   document.getElementById("cards").innerHTML = cardsData.map(skill => `
     <div class="card">
       <img src="${skill.image}" alt="${skill.title}">
@@ -85,21 +83,46 @@
       <p>${skill.description}</p>
     </div>
   `).join("");
-
   function toggleMenu() {
     const menu = document.getElementById("navLinks");
     menu.style.display = menu.style.display === "block" ? "none" : "block";
   }
-
   function toggleTheme() {
     document.body.classList.toggle("light-mode");
   }
 </script>
-
 <section id="contact">
-  <h1>Contact</h1>
-  <p>varshinikalaiselvi06@gmail.com</p><br>
-  <p>9361493303</p>
+  <h1>CONTACT</h1>
+  <div class="contact-wrapper">  
+    <div class="contact-info">
+      <h2>Get In Touch</h2>
+      <p><strong>Name:</strong> Varshini.P</p>
+      <p><strong>Email:</strong> varshinikalaiselvi06@gmail.com</p>
+      <p><strong>Phone:</strong> +91 9361493303</p>
+      <p><strong>Linkedin:</strong> www.linkedin.com/in/varshini-palanisamy-098b8a2a2</p>
+      <p><strong>Github:</strong> https://share.google/mMOZQXuxtavmj9C4o</p>
+      <p><strong>Location:</strong> Erode,Tamil Nadu, India</p>
+    </div>    
+     <div class="contact-form">
+                <form id="portfolio-contact-form" action="javascript:void(0);">
+                    <input type="text" name="from_name" id="form_name" placeholder="Your Name" onclick="">
+                    <span id="name-error" class="error-msg"></span>
+                    
+                    <input type="email" name="user_email" id="form_email" placeholder="Your Email">
+                    <span id="email-error" class="error-msg"></span>
+                    
+                    <textarea name="message" id="form_message" rows="4" placeholder="Your Message"></textarea>
+                    <span id="message-error" class="error-msg"></span>
+                    
+                    <button type="submit" id="submit-btn" class="submit-btn">Send Message</button>
+                </form>
+                <div id="form-response" style="margin-top: 10px; font-weight: bold; text-align: center;"></div>
+  </div>
 </section>
-</body>
-</html>
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e){
+  e.preventDefault();
+  alert("Message Sent Successfully ✅");
+  this.reset();
+});
+</script>

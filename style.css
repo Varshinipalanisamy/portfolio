@@ -2,16 +2,17 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 body{
   padding-top:90px;
 }
-html {
+html { 
   scroll-behavior: smooth;
 }
 body {
   font-family: Georgia, serif;
-  background-color: #0e0e0f;
+  background-color: #1a1e17;
   color: rgb(237, 230, 230);
   line-height: 1.6;
 }
@@ -38,43 +39,36 @@ body{
 hero h1{
   font-size: clamp(28px, 6vm, 60px);
 }
-
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: black;
+  background: rgb(13, 10, 13);
   padding: 20px 10%;
   position: relative;
 }
-
 .logo {
   font-size: 28px;
   color: rgb(227, 221, 221);
 }
-
 nav ul {
   display: flex;
   list-style: none;
   gap: 20px;
 }
-
 nav a {
   text-decoration: none;
   color: rgb(244, 242, 242);
 }
-
 nav a:hover {
   color: orange;
 }
-
 .hamburger {
   font-size: 28px;
   cursor: pointer;
   color: white;
   display: none;
 }
-
 .theme-btn {
   background: none;
   border: none;
@@ -82,50 +76,41 @@ nav a:hover {
   cursor: pointer;
   color: white;
 }
-
-
 section {
   padding: 80px 10%;
   text-align: center;
 }
-
 #home p {
   margin-top: 20px;
 }
-
 #home {
   min-height: 90vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;ś
+  justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: #a7cbf2;
+  background-color: #f6b2ed;
 }
-
 #home h1 {
   font-size: 48px;
   margin-bottom: 15px;
 }
-
 #home p {
   font-size: 18px;
   max-width: 700px;
 }
 #about {
-  background-color: #000;
+  background-color: #060506;
   color: white;
   min-height: 100vh;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   text-align: center;
   padding: 0 20px;
 }
-
 #about h2 {
   font-size: 42px;
   margin-bottom: 20px;
@@ -133,14 +118,12 @@ section {
 .section {
   width: 100%;
 }
-
 #about p {
   max-width: 700px;
   margin: 0 auto;
   font-size: 18px;
   line-height: 1.8;
 }
-
 nav {
   position: sticky;
   top: 0;
@@ -164,7 +147,6 @@ nav {
   gap: 40px;
   flex-wrap: wrap;
 }
-
 .project-card {
   width: 320px;
   background: #0b1a35;
@@ -173,27 +155,41 @@ nav {
   text-align: center;
   transition: 0.4s;
 }
-
-.project-card:hover {
-  transform: translateY(-10px);
-}
-
 .project-card img {
   width: 200px;
   height: 200px;
   object-fit: contain;
   margin-bottom: 20px;
 }
-
 .project-card h3 {
   color: #2ec4ff;
   margin-bottom: 15px;
 }
-
+.second-project {
+  background: #1e293b;
+  padding: 30px;
+  width: 320px;
+  border-radius: 20px;
+  text-align: center;
+  border: 2px solid #38bdf8;
+  transition: 0.3s ease;
+}
+.second-project:hover {
+  transform: scale(1.05);
+}
+.second-project h3 {
+  color: #00e0ff;
+}
+.second-project a {
+  background: #00e0ff;
+  color: black;
+  padding: 8px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+}
 .project-card p {
   color: white;
 }
-
 .card img {
   width: 80px;
   margin-bottom: 15px;
@@ -370,4 +366,51 @@ about-content p{
 }
 .about-content {
   text-align: center;
+}
+#contact h1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.contact-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.contact-info {
+  flex: 1;
+  min-width: 250px;
+}
+.contact-info h2 {
+  margin-bottom: 20px;
+}
+.contact-info p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+.contact-form {
+  flex: 1;
+  min-width: 250px;
+}
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+.contact-form button {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #6c63ff;
+  color: white;
+  cursor: pointer;
+}
+.contact-form button:hover {
+  background: #4b47c2;
 }
