@@ -1,10 +1,11 @@
 // EmailJS Configuration from config.js
 // config.js is loaded before this script and sets window.EMAILJS_CONFIG
 const EMAILJS_CONFIG = window.EMAILJS_CONFIG || {
-    PUBLIC_KEY: "EqQi8B4TsUDRQVyf3",
-    SERVICE_ID: "service_wikafgs",
-    TEMPLATE_ID: "template_i7u75g3"
+      PUBLIC_KEY: "Xq1jwgnzFo_5xN-72",
+    SERVICE_ID: "service_ysl56xx",
+    TEMPLATE_ID: "template_it5tgg4"
 };
+
 
 console.log("✓ EmailJS Config loaded from config.js:", EMAILJS_CONFIG);
 
